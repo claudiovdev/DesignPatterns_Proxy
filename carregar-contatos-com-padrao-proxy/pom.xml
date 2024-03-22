@@ -25,13 +25,14 @@
 	</build>
 	
 	<dependencies>
-		<!-- Leitor XML -->
+		<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
 			<artifactId>xstream</artifactId>
-			<version>1.4.7</version>
+			<version>1.4.20</version>
 		</dependency>
-		
+
+
 		<!-- jUnit -->
 		<dependency>
 			<groupId>junit</groupId>

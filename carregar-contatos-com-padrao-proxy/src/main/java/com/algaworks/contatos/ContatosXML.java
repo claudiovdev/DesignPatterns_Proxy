@@ -7,6 +7,7 @@ import java.util.Map;
 import com.algaworks.model.Contato;
 import com.algaworks.repository.Contatos;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.AnyTypePermission;
 
 public class ContatosXML implements Contatos {
 
@@ -15,7 +16,8 @@ public class ContatosXML implements Contatos {
 	@SuppressWarnings("unchecked")
     public ContatosXML(String... nomesArquivos) {
 		XStream xstream = new XStream();
-	    xstream.alias("contatos", List.class);
+		xstream.addPermission(AnyTypePermission.ANY);
+		xstream.alias("contatos", List.class);
 	    xstream.alias("contato", Contato.class);
 	    
 	    for (String nomeArquivo : nomesArquivos) {
